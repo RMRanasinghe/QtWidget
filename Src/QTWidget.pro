@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    communicator.cpp
+    communicator.cpp \
+    graphic.cpp
 
 HEADERS  += widget.h \
-    communicator.h
+    communicator.h \
+    graphic.h
 
 FORMS    += widget.ui
 

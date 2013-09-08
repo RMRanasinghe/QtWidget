@@ -29,3 +29,12 @@ Widget::~Widget()
 }
 
 
+void Widget::on_buttonBox_accepted()
+{
+    exit(0);
+}
+
+void Widget::on_buttonBox_rejected()
+{
+    exit(0);
+}

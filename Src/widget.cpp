@@ -15,25 +15,34 @@
 #include "iostream"
 
 using namespace std;
-
+/*
+ *constructor of the main widget window.
+ */
 Widget::Widget(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
 }
-
+/*
+ *Distructor of the main window.
+ */
 Widget::~Widget()
 {
     delete ui;
 }
 
-
+/*
+ *Bottem OK button click action.
+ */
 void Widget::on_buttonBox_accepted()
 {
     exit(0);
 }
-
+/*
+ *Bottom Cansel button click action. This has been set to exit the window.
+ *
+ */
 void Widget::on_buttonBox_rejected()
 {
     exit(0);

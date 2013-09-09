@@ -56,3 +56,7 @@ void Widget::on_buttonBox_rejected()
 {
     exit(0);
 }
+
+void Widget::on_pushButton_clicked()
+{
+}

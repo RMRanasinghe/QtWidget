@@ -1,6 +1,7 @@
 #ifndef GRAPHIC_H
 #define GRAPHIC_H
 #include "ui_widget.h"
+#include "widget.h"
 
 class graphic
 {

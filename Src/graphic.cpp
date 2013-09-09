@@ -10,6 +10,7 @@
 
 #include "graphic.h"
 #include "ui_widget.h"
+#include "widget.h"
 
 //constructor. TODO:set as singleton class
 graphic::graphic()

@@ -23,8 +23,8 @@ graphic::graphic()
  */
 void graphic::setImage(QLabel* label){
 
-    QPixmap* original = new QPixmap("/home/rama/Downloads/virus.png");//TODO:this path should changed to the temp folter
-    QPixmap scaled(original->scaled(label->height(),label->width(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation));//scale the pixmap to the lable size and width
+    QPixmap* original = new QPixmap("../temp/temp.png");//TODO:this path should changed to the temp folter
+    QPixmap scaled(original->scaled(label->width(),label->height(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation));//scale the pixmap to the lable size and width
 
     label->setPixmap(scaled);//set image
 

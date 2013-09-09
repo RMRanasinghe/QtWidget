@@ -13,6 +13,7 @@
 #include "ui_widget.h"
 #include "communicator.h"
 #include "iostream"
+#include "graphic.h"
 
 using namespace std;
 /*
@@ -37,7 +38,15 @@ Widget::~Widget()
  */
 void Widget::on_buttonBox_accepted()
 {
-    exit(0);
+    /*
+     *create graphic object instance and set the label as the image in the temp variable
+     */
+    graphic* gp = new graphic();
+    graphic g= *gp;
+
+    g.setImage(ui->label);
+
+    //exit(0);
 }
 /*
  *Bottom Cansel button click action. This has been set to exit the window.

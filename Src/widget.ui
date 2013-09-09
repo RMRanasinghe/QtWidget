@@ -179,7 +179,7 @@
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>PushButton</string>
+       <string>Add New Graph</string>
       </property>
      </widget>
     </item>

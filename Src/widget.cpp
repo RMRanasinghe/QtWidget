@@ -59,5 +59,13 @@ void Widget::on_buttonBox_rejected()
 
 void Widget::on_pushButton_clicked()
 {
-    ui->verticalLayout_2->addWidget(new QPushButton("saman"),0,Qt::AlignBottom);
+    /*
+     *Here verticalLayout_2 is the layout inside the scroll plane. TODO: all the widgets added to the
+     *scorll plane should be added to this layout.
+     */
+
+    //TODO: to add multiple graphs this function should be added.
+
+    //syntax reference
+    //ui->verticalLayout_2->addWidget(new QPushButton("saman"),0,Qt::AlignBottom);
 }

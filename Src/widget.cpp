@@ -59,4 +59,5 @@ void Widget::on_buttonBox_rejected()
 
 void Widget::on_pushButton_clicked()
 {
+    ui->verticalLayout_2->addWidget(new QPushButton("saman"),0,Qt::AlignBottom);
 }

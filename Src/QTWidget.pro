@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         widget.cpp \
     communicator.cpp \
-    graphic.cpp
+    graphic.cpp \
+    plotcommandgenarator.cpp
 
 HEADERS  += widget.h \
     communicator.h \
-    graphic.h
+    graphic.h \
+    plotcommandgenarator.h
 
 FORMS    += widget.ui
 

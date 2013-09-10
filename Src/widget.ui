@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>744</width>
-    <height>684</height>
+    <width>745</width>
+    <height>739</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,6 +30,12 @@
     </item>
     <item>
      <widget class="QScrollArea" name="scrollArea_2">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
@@ -38,8 +44,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>724</width>
-         <height>118</height>
+         <width>725</width>
+         <height>93</height>
         </rect>
        </property>
        <widget class="QLineEdit" name="lineEdit_3">
@@ -129,25 +135,17 @@
          <string>Upper Bound:</string>
         </property>
        </widget>
-       <zorder>lineEdit_3</zorder>
-       <zorder>label_2</zorder>
-       <zorder>lineEdit</zorder>
-       <zorder>lineEdit_2</zorder>
-       <zorder>label_5</zorder>
-       <zorder>label_4</zorder>
-       <zorder>label_3</zorder>
-       <zorder>lineEdit_3</zorder>
-       <zorder>label_2</zorder>
-       <zorder>lineEdit</zorder>
-       <zorder>lineEdit_2</zorder>
-       <zorder>label_5</zorder>
-       <zorder>label_4</zorder>
-       <zorder>label_3</zorder>
       </widget>
      </widget>
     </item>
     <item>
      <widget class="QScrollArea" name="scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
       <property name="verticalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOn</enum>
       </property>
@@ -162,8 +160,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>710</width>
-         <height>118</height>
+         <width>711</width>
+         <height>198</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -171,8 +169,6 @@
          <layout class="QVBoxLayout" name="verticalLayout_2"/>
         </item>
        </layout>
-       <zorder>scrollArea_2</zorder>
-       <zorder>verticalLayoutWidget</zorder>
       </widget>
      </widget>
     </item>
@@ -197,7 +193,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>744</width>
+     <width>745</width>
      <height>19</height>
     </rect>
    </property>

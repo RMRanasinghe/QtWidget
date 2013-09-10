@@ -62,8 +62,3 @@ QString graphConstructor::getLineType(){
 QString graphConstructor::getEquation(){
     return equation;
 }
-
-
-
-
-

@@ -11,6 +11,7 @@ public:
     QString SetX(QString lowerBound,QString upperBound);
     QString SetX(QString lowerBound,QString upperBound,QString stepSize);
     QString setY(QString equation);
+    QString setY(QString variableName, QString equation);
     QString command_init();
 };
 

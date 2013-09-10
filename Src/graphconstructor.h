@@ -16,7 +16,6 @@ public:
     QString getLabel();
     QString getLineType();
     QString getEquation();
-    graphConstructor* getInstance();
 
 private:
     QString variableName; //variable name of y axis, y1,y2,y3...
@@ -24,7 +23,6 @@ private:
     QString lineType;//line types. line, - , *, + etc
     QString label; //name of the label.
     QString equation;
-    graphConstructor* graphConstructorInstance;
 };
 
 #endif // GRAPHCONSTRUCTOR_H

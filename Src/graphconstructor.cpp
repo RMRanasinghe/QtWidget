@@ -15,7 +15,6 @@
 //graphConstructor
 graphConstructor::graphConstructor()
 {
-    graphConstructorInstance = new graphConstructor();
 }
 /*
  *Setter methods of graph properties
@@ -64,9 +63,6 @@ QString graphConstructor::getEquation(){
     return equation;
 }
 
-graphConstructor* graphConstructor::getInstance(){
-    return graphConstructorInstance;
-}
 
 
 

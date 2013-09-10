@@ -1,3 +1,14 @@
+/*
+ *
+ *Author: Rajitha Ranasinghe
+ *Date: 2:08:2013
+ *Project: Qt widget for manipulatin plots
+ *Objectave:Communicator class header file.
+ *TODO: Transfer this class to octave init class and develop as a toolkit
+ *lisence: GPL v2
+ *
+ */
+
 #ifndef COMMUNICATOR_H
 #define COMMUNICATOR_H
 

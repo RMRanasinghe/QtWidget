@@ -18,14 +18,16 @@ SOURCES += main.cpp\
     graphic.cpp \
     plotcommandgenarator.cpp \
     graphlist.cpp \
-    graphconstructor.cpp
+    graphconstructor.cpp \
+    widgettreestruct.cpp
 
 HEADERS  += widget.h \
     communicator.h \
     graphic.h \
     plotcommandgenarator.h \
     graphconstructor.h \
-    graphlist.h
+    graphlist.h \
+    widgettreestruct.h
 
 FORMS    += widget.ui
 

@@ -14,7 +14,9 @@
 #include "communicator.h"
 #include "iostream"
 #include "graphic.h"
+#include "widgettreestruct.h"
 #include <QComboBox>
+#include <QFormLayout>
 
 using namespace std;
 /*
@@ -61,24 +63,12 @@ void Widget::on_buttonBox_rejected()
 void Widget::on_pushButton_clicked()
 {
     /*
-     *Y axis items. This should be changed and added. TODO: should change
-     *
-     */
-    ui->verticalLayout_2->addWidget(new QLabel("Y:"),0,Qt::AlignBottom);
-    ui->verticalLayout_2->addWidget(new QLineEdit(),0,Qt::AlignBottom);
-    ui->verticalLayout_2->addWidget(new QLabel("Label:"),0,Qt::AlignBottom);
-    ui->verticalLayout_2->addWidget(new QLineEdit(),0,Qt::AlignBottom);
-    ui->verticalLayout_2->addWidget(new QLabel("Color:"),0,Qt::AlignBottom);
-    ui->verticalLayout_2->addWidget(new QComboBox(),0,Qt::AlignBottom);
-    ui->verticalLayout_2->addWidget(new QLabel("Line Type:"),0,Qt::AlignBottom);
-    ui->verticalLayout_2->addWidget(new QComboBox(),0,Qt::AlignBottom);
-    /*
-     *Here verticalLayout_2 is the layout inside the scroll plane. TODO: all the widgets added to the
-     *scorll plane should be added to this layout.
+     *add New graph push button action lister.
+     *should add new graph structure to the bottem of the scroll area.
      */
 
-    //TODO: to add multiple graphs this function should be added.
+    widgetTreeStruct* tr = new widgetTreeStruct();
+    QFormLayout* ly = tr->getTree();
 
-    //syntax reference
-    //ui->verticalLayout_2->addWidget(new QPushButton("saman"),0,Qt::AlignBottom);
+    ui->verticalLayout_2->addLayout(ly);
 }

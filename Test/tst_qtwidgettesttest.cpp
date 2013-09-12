@@ -1,3 +1,13 @@
+/*
+ *
+ *Author: Rajitha Ranasinghe
+ *Date: 9:09:2013
+ *Project: Qt widget for manipulatin plots
+ *Objectave: Test Class for QtWidget
+ *lisence: GPL v2
+ *
+ */
+
 #include <QString>
 #include <QtTest>
 #include "../Src/plotcommandgenarator.h"
@@ -49,7 +59,17 @@ void QtWidgetTestTest::TestPlotCommandGenaratorSetX()
 }
 void QtWidgetTestTest::TestPlotCommandGenaratorSetY()
 {
+    /*
+     *Test Comand genarator set Y command genarating method overloads
+     */
 
+    //For default y plots.
+    QCOMPARE(plot_command_genarator->setY(QString("2.*x")),QString("y=2.*x;"));
+    QCOMPARE(plot_command_genarator->setY(QString("sin(2*x)+cos(2*x)")),QString("y=sin(2*x)+cos(2*x);"));
+
+    //For other plots
+    QCOMPARE(plot_command_genarator->setY(QString("y1"), QString("2.*x")),QString("y1=2.*x;"));
+    QCOMPARE(plot_command_genarator->setY(QString("t"), QString("sin(2*x)+cos(2*x)")),QString("t=sin(2*x)+cos(2*x);"));
 }
 QTEST_APPLESS_MAIN(QtWidgetTestTest)
 

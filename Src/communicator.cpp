@@ -20,6 +20,14 @@
  */
 communicator::communicator()
 {
+    /*
+     *Communicator class should have one implementation. so set communicator class as
+     *singleton implementation.
+     */
+
+
+    communicator_instance = new communicator();
+
     QStringList arguments;
     arguments << "--persist"; //set arguments of the octave process. --persist:Go interactive after
     octave.setProcessChannelMode(QProcess::MergedChannels); //set process channel
@@ -71,3 +79,6 @@ QString communicator::processRead(){
     return output;
 }
 
+communicator* communicator::getInstance(){
+    return communicator_instance;
+}

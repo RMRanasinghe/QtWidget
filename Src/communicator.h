@@ -21,8 +21,10 @@ public:
     ~communicator();//communicator class distructor
     void processWrite(QString str); //send command to octave process
     QString processRead(); //read Standerd output of octave process
+    communicator* getInstance();//communicator singleton instance
 private:
     QProcess octave; //main octave process.
+    communicator* communicator_instance;
 };
 
 #endif // COMMUNICATOR_H

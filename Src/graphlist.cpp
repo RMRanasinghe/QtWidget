@@ -17,8 +17,6 @@
  */
 graphList::graphList()
 {
-    //here creates graphList instance that can be accessed in every method.
-    graphListInstance = new graphList();
 }
 
 /*
@@ -41,5 +39,10 @@ void graphList::deleteGraphList(){
 
 //get the common instance of the graphlise.
 graphList* graphList::getInstance(){
+
+    //here creates graphList instance that can be accessed in every method.
+    if(graphListInstance == NULL){
+        graphListInstance = new graphList();
+    }
     return graphListInstance;
 }

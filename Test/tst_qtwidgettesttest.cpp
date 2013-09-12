@@ -11,6 +11,8 @@
 #include <QString>
 #include <QtTest>
 #include "../Src/plotcommandgenarator.h"
+#include "../Src/communicator.h"
+#include "../Src/graphlist.h"
 
 class QtWidgetTestTest : public QObject
 {
@@ -23,6 +25,8 @@ public:
 private Q_SLOTS:
     void TestPlotCommandGenaratorSetX();
     void TestPlotCommandGenaratorSetY();
+    void TestCommunicator();
+    void TestGraphlist();
 };
 
 QtWidgetTestTest::QtWidgetTestTest()
@@ -71,6 +75,27 @@ void QtWidgetTestTest::TestPlotCommandGenaratorSetY()
     QCOMPARE(plot_command_genarator->setY(QString("y1"), QString("2.*x")),QString("y1=2.*x;"));
     QCOMPARE(plot_command_genarator->setY(QString("t"), QString("sin(2*x)+cos(2*x)")),QString("t=sin(2*x)+cos(2*x);"));
 }
+
+void QtWidgetTestTest::TestCommunicator(){
+    communicator* communicator_instance1 =communicator().getInstance();
+    communicator* communicator_instance2 =communicator().getInstance();
+
+    //Test we can get the correct object
+    QVERIFY(communicator_instance1 != NULL ); //null test
+    QVERIFY(communicator_instance2 != NULL ); //null test
+    QVERIFY(communicator_instance1 == communicator_instance2); //singleton test
+
+}
+
+void QtWidgetTestTest::TestGraphlist(){
+    graphList* graphList_instance1 = graphList().getInstance();
+    graphList* graphList_instance2 = graphList().getInstance();
+
+    QVERIFY(graphList_instance1 != NULL); //null test
+    QVERIFY(graphList_instance2 != NULL); //null test
+    QVERIFY(graphList_instance1 == graphList_instance2); //singleton test
+}
+
 QTEST_APPLESS_MAIN(QtWidgetTestTest)
 
 #include "tst_qtwidgettesttest.moc"

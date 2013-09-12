@@ -26,13 +26,16 @@ communicator::communicator()
      */
 
 
-    communicator_instance = new communicator();
+    if(communicator_instance == NULL){
+        communicator_instance = new communicator();
+    }
 
     QStringList arguments;
     arguments << "--persist"; //set arguments of the octave process. --persist:Go interactive after
     octave.setProcessChannelMode(QProcess::MergedChannels); //set process channel
     octave.start("/usr/bin/octave", arguments);//If octave has installed into any other directory this should be changed.
     octave.waitForStarted();//wait for the process get started.
+
 }
 
 communicator::~communicator()

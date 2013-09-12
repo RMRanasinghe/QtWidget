@@ -12,14 +12,15 @@ TARGET = QTWidget
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
+SOURCES +=\
         widget.cpp \
     communicator.cpp \
     graphic.cpp \
     plotcommandgenarator.cpp \
     graphlist.cpp \
     graphconstructor.cpp \
-    widgettreestruct.cpp
+    widgettreestruct.cpp \
+    main.cpp
 
 HEADERS  += widget.h \
     communicator.h \

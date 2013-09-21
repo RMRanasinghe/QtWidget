@@ -15,6 +15,7 @@
  *Constructor of the graphlist class. This is a Singleton implemantation of graphlist class. we can refere graphListInstance
  *in every whare.
  */
+using namespace std;
 
 graphList* graphList::graphListInstance = NULL;
 
@@ -33,11 +34,12 @@ void graphList::addGraph(QString variableName,QString color,QString lineType,QSt
     graph->setLabel(label);//set label
     graph->setLineType(lineType);//set line type
     graph->setVariableName(variableName);//set variable name
+    graphLinkedList.push_back(graph);
 }
 
 //delete whole graphlist and add new graphlist
 void graphList::deleteGraphList(){
-    graphListInstance = new graphList();
+    graphLinkedList.clear();
 }
 
 //get the common instance of the graphlise.
@@ -48,4 +50,9 @@ graphList* graphList::getInstance(){
         graphListInstance = new graphList();
     }
     return graphListInstance;
+}
+
+//get the graphList
+std::list<graphConstructor *> graphList::getGraphList(){
+    return graphLinkedList;
 }

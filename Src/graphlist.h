@@ -17,10 +17,11 @@ class graphList
 {
 public:
     graphList();
-    std::list <graphConstructor> l;
+    std::list <graphConstructor *> graphLinkedList;
     void addGraph(QString variableName,QString color,QString lineType,QString label,QString equation);
     void deleteGraphList();
     static graphList* getInstance();
+    std::list<graphConstructor *> getGraphList();
 private:
     static graphList* graphListInstance;
 };

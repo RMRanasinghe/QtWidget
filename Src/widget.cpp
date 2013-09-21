@@ -38,30 +38,10 @@ Widget::~Widget()
     delete ui;
 }
 
+
 /*
- *Bottem OK button click action.
+ *Add new graph button action listner
  */
-void Widget::on_buttonBox_accepted()
-{
-    /*
-     *create graphic object instance and set the label as the image in the temp variable
-     */
-    graphic* gp = new graphic();
-    graphic g= *gp;
-
-    g.setImage(ui->label);
-
-    //exit(0);
-}
-/*
- *Bottom Cansel button click action. This has been set to exit the window.
- *
- */
-void Widget::on_buttonBox_rejected()
-{
-    exit(0);
-}
-
 void Widget::on_pushButton_clicked()
 {
     /*
@@ -74,4 +54,36 @@ void Widget::on_pushButton_clicked()
     QFormLayout* layout = tree->getTree(); // get the instance
 
     ui->verticalLayout_2->addLayout(layout); //add to the vertical layout
+}
+
+/*
+ *Plot graph button action listner
+ */
+void Widget::on_pushButton_3_clicked()
+{
+    /*
+     *create graphic object instance and set the label as the image in the temp variable
+     */
+    graphic* gp = new graphic();
+    graphic g= *gp;
+
+    g.setImage(ui->label);
+
+    //exit(0);
+}
+
+/*
+ *exit button
+ */
+void Widget::on_pushButton_2_clicked()
+{
+    exit(0);
+}
+
+/*
+ *Reset button
+ */
+void Widget::on_pushButton_4_clicked()
+{
+
 }

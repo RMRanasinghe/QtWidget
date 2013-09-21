@@ -23,7 +23,6 @@ widgetTreeStruct::widgetTreeStruct(QString variableName)
     QLineEdit* label = new QLineEdit(); // label of the graph
     QComboBox* color = new QComboBox(); //color selector
     QComboBox* lineType = new QComboBox(); //line type selector
-    QString variable = variableName; //this variable name is the number of the graph
 
     /*
      *color selector menu.

@@ -20,9 +20,9 @@ public:
     std::list <graphConstructor> l;
     void addGraph(QString variableName,QString color,QString lineType,QString label,QString equation);
     void deleteGraphList();
-    graphList* getInstance();
+    static graphList* getInstance();
 private:
-    graphList* graphListInstance;
+    static graphList* graphListInstance;
 };
 
 #endif // GRAPHLIST_H

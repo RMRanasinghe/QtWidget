@@ -15,6 +15,9 @@
  *Constructor of the graphlist class. This is a Singleton implemantation of graphlist class. we can refere graphListInstance
  *in every whare.
  */
+
+graphList* graphList::graphListInstance = NULL;
+
 graphList::graphList()
 {
 }

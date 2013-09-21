@@ -18,6 +18,8 @@
  *as a QProcess.This octave process instance is globle for this class.
  *Dependancies: Octave should install into the /usr/bin/octave directory.
  */
+communicator* communicator::communicator_instance = NULL;
+
 communicator::communicator()
 {
     /*
@@ -25,10 +27,6 @@ communicator::communicator()
      *singleton implementation.
      */
 
-
-    if(communicator_instance == NULL){
-        communicator_instance = new communicator();
-    }
 
     QStringList arguments;
     arguments << "--persist"; //set arguments of the octave process. --persist:Go interactive after
@@ -83,5 +81,8 @@ QString communicator::processRead(){
 }
 
 communicator* communicator::getInstance(){
+    if(communicator_instance == NULL){
+        communicator_instance = new communicator();
+    }
     return communicator_instance;
 }

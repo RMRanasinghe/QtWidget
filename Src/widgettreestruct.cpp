@@ -15,24 +15,6 @@
 #include <QComboBox>
 
 
-widgetTreeStruct::widgetTreeStruct()
-{
-    tree = new QFormLayout;
-
-    QLineEdit* equation =  new QLineEdit();
-    QLineEdit* label = new QLineEdit();
-    QComboBox* color = new QComboBox();
-    QComboBox* lineType = new QComboBox();
-    QLabel* variable = new QLabel("Y:");
-
-    tree->addWidget(new QLabel(QString("Graph Y:")));
-    tree->addRow(variable,equation);
-    tree->addRow(new QLabel("Label:"),label);
-    tree->addRow(new QLabel("Color:"),color);
-    tree->addRow(new QLabel("Line Type:"),lineType);
-}
-
-
 widgetTreeStruct::widgetTreeStruct(QString variableName)
 {
     tree = new QFormLayout;

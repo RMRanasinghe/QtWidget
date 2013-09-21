@@ -12,15 +12,16 @@
 #ifndef WIDGETTREESTRUCT_H
 #define WIDGETTREESTRUCT_H
 #include <QFormLayout>
+#include <QLabel>
 
 class widgetTreeStruct
 {
 public:
-    widgetTreeStruct();
     widgetTreeStruct(QString variableName);
     QFormLayout *getTree();
 private:
     QFormLayout* tree;
+    QLabel* topic;
 };
 
 #endif // WIDGETTREESTRUCT_H

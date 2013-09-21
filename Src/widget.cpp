@@ -27,6 +27,8 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
+
+    numberOfGraphs = 0; //initialize the number of graph
 }
 /*
  *Distructor of the main window.
@@ -66,9 +68,10 @@ void Widget::on_pushButton_clicked()
      *add New graph push button action lister.
      *should add new graph structure to the bottem of the scroll area.
      */
+    ++ numberOfGraphs; //increment number of graphs
 
-    widgetTreeStruct* tr = new widgetTreeStruct();
-    QFormLayout* ly = tr->getTree();
+    widgetTreeStruct* tree = new widgetTreeStruct(QString::number(numberOfGraphs)); //initialize graph tree for one graph
+    QFormLayout* layout = tree->getTree(); // get the instance
 
-    ui->verticalLayout_2->addLayout(ly);
+    ui->verticalLayout_2->addLayout(layout); //add to the vertical layout
 }

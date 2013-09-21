@@ -36,6 +36,8 @@ private slots:
 
 private:
     Ui::Widget *ui;
+
+    int numberOfGraphs;
 };
 
 #endif // WIDGET_H

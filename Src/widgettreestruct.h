@@ -13,15 +13,24 @@
 #define WIDGETTREESTRUCT_H
 #include <QFormLayout>
 #include <QLabel>
+#include <QComboBox>
 
 class widgetTreeStruct
 {
 public:
     widgetTreeStruct(QString variableName);
     QFormLayout *getTree();
+    QString getEquation();
+    QString getColor();
+    QString getLineType();
+    QString getLabel();
 private:
     QFormLayout* tree;
     QLabel* topic;
+    QComboBox* lineType;
+    QComboBox* color ;
+    QLineEdit* label ;
+    QLineEdit* equation ;
 };
 
 #endif // WIDGETTREESTRUCT_H

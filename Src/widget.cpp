@@ -17,6 +17,7 @@
 #include "widgettreestruct.h"
 #include <QComboBox>
 #include <QFormLayout>
+#include  "graphlist.h"
 
 using namespace std;
 /*
@@ -50,8 +51,11 @@ void Widget::on_pushButton_clicked()
      */
     ++ numberOfGraphs; //increment number of graphs
 
+    graphList* graph_list = graphList().getInstance();
+
     widgetTreeStruct* tree = new widgetTreeStruct(QString::number(numberOfGraphs)); //initialize graph tree for one graph
     QFormLayout* layout = tree->getTree(); // get the instance
+    graph_list->addTree(tree);
 
     ui->verticalLayout_2->addLayout(layout); //add to the vertical layout
 }
@@ -87,4 +91,5 @@ void Widget::on_pushButton_2_clicked()
  */
 void Widget::on_pushButton_4_clicked()
 {
+
 }

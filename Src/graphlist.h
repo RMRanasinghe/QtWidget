@@ -11,7 +11,9 @@
 #ifndef GRAPHLIST_H
 #define GRAPHLIST_H
 #include <list>
+#include <QFormLayout>
 #include "graphconstructor.h"
+#include "widgettreestruct.h"
 
 class graphList
 {
@@ -22,6 +24,8 @@ public:
     void deleteGraphList();
     static graphList* getInstance();
     std::list<graphConstructor *> getGraphList();
+    std::list<widgetTreeStruct *> treeList;
+    void addTree(widgetTreeStruct *tree);
 private:
     static graphList* graphListInstance;
 };

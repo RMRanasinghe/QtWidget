@@ -56,3 +56,7 @@ graphList* graphList::getInstance(){
 std::list<graphConstructor *> graphList::getGraphList(){
     return graphLinkedList;
 }
+
+void graphList::addTree(widgetTreeStruct *tree){
+    treeList.push_back(tree);
+}

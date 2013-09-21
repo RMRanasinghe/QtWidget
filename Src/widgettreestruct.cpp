@@ -19,10 +19,10 @@ widgetTreeStruct::widgetTreeStruct(QString variableName)
 {
     tree = new QFormLayout; //tree structure for one graph
 
-    QLineEdit* equation =  new QLineEdit(); //test area for write equation
-    QLineEdit* label = new QLineEdit(); // label of the graph
-    QComboBox* color = new QComboBox(); //color selector
-    QComboBox* lineType = new QComboBox(); //line type selector
+    equation =  new QLineEdit(); //test area for write equation
+    label = new QLineEdit(); // label of the graph
+    color = new QComboBox(); //color selector
+    lineType = new QComboBox(); //line type selector
 
     /*
      *color selector menu.
@@ -74,6 +74,45 @@ widgetTreeStruct::widgetTreeStruct(QString variableName)
     tree->addRow(new QLabel("Line Type:"),lineType);
 }
 
+//return tree structure as QFormLayout
 QFormLayout* widgetTreeStruct::getTree(){
     return tree;
+}
+
+
+//get the number of Color
+QString widgetTreeStruct::getColor(){
+    return QString::number(color->currentIndex());
+}
+
+
+//getTheEquation
+QString widgetTreeStruct::getEquation(){
+    return equation->text();
+}
+
+//get The Label value
+QString widgetTreeStruct::getLabel(){
+    return label->text();
+}
+
+//get The line types
+QString widgetTreeStruct::getLineType(){
+    switch (lineType->currentIndex()) {
+    case 0:
+        return QString("-");
+        break;
+    case 1:
+        return QString(".");
+    case 2:
+        return QString("*");
+    case 3:
+        return QString("0");
+    case 4:
+        return QString("x");
+    case 5:
+        return QString("^");
+    default:
+        return QString("");
+    }
 }

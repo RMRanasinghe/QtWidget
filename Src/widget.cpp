@@ -61,6 +61,8 @@ void Widget::on_pushButton_clicked()
  */
 void Widget::on_pushButton_3_clicked()
 {
+
+
     /*
      *create graphic object instance and set the label as the image in the temp variable
      */
@@ -85,5 +87,4 @@ void Widget::on_pushButton_2_clicked()
  */
 void Widget::on_pushButton_4_clicked()
 {
-
 }

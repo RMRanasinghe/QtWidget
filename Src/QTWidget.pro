@@ -20,7 +20,8 @@ SOURCES +=\
     graphlist.cpp \
     graphconstructor.cpp \
     widgettreestruct.cpp \
-    main.cpp
+    main.cpp \
+    plot.cpp
 
 HEADERS  += widget.h \
     communicator.h \
@@ -28,7 +29,8 @@ HEADERS  += widget.h \
     plotcommandgenarator.h \
     graphconstructor.h \
     graphlist.h \
-    widgettreestruct.h
+    widgettreestruct.h \
+    plot.h
 
 FORMS    += widget.ui
 

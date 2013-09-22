@@ -18,6 +18,7 @@
 #include <QComboBox>
 #include <QFormLayout>
 #include  "graphlist.h"
+#include "plot.h"
 
 using namespace std;
 /*
@@ -66,6 +67,8 @@ void Widget::on_pushButton_clicked()
 void Widget::on_pushButton_3_clicked()
 {
 
+    plot* plot_instance = new plot();
+    plot_instance->setPlot(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->lineEdit_3->text(),graphList().getInstance()->treeList);
 
     /*
      *create graphic object instance and set the label as the image in the temp variable

@@ -127,4 +127,3 @@ QString PlotCommandGenarator::setY(QString variableName,QString equation){
     return cmd.append(";");
 }
 
-

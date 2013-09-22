@@ -57,6 +57,9 @@
           <height>22</height>
          </rect>
         </property>
+        <property name="text">
+         <string>0.1</string>
+        </property>
        </widget>
        <widget class="QLabel" name="label_2">
         <property name="geometry">
@@ -85,6 +88,9 @@
           <height>22</height>
          </rect>
         </property>
+        <property name="text">
+         <string>10</string>
+        </property>
        </widget>
        <widget class="QLineEdit" name="lineEdit_2">
         <property name="geometry">
@@ -94,6 +100,9 @@
           <width>131</width>
           <height>22</height>
          </rect>
+        </property>
+        <property name="text">
+         <string>-10</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_5">

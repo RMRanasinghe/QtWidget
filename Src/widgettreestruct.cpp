@@ -107,7 +107,7 @@ QString widgetTreeStruct::getLineType(){
     case 2:
         return QString("*");
     case 3:
-        return QString("0");
+        return QString("o");
     case 4:
         return QString("x");
     case 5:

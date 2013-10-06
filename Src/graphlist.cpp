@@ -60,3 +60,7 @@ std::list<graphConstructor *> graphList::getGraphList(){
 void graphList::addTree(widgetTreeStruct *tree){
     treeList.push_back(tree);
 }
+
+void graphList::getNewGraphlist(){
+    graphListInstance =NULL;
+}

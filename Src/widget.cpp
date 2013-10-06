@@ -94,5 +94,27 @@ void Widget::on_pushButton_2_clicked()
  */
 void Widget::on_pushButton_4_clicked()
 {
+    remove(ui->verticalLayout_2);
+    numberOfGraphs = 0;
+    graphList* graph_list = graphList().getInstance();
+    graph_list->getNewGraphlist();
+}
 
+void Widget::remove(QLayout* layout)
+{
+    QLayoutItem* child;
+    while(layout->count()!=0)
+    {
+        child = layout->takeAt(0);
+        if(child->layout() != 0)
+        {
+            remove(child->layout());
+        }
+        else if(child->widget() != 0)
+        {
+            delete child->widget();
+        }
+
+        delete child;
+    }
 }

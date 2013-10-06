@@ -40,6 +40,7 @@ private:
     Ui::Widget *ui;
 
     int numberOfGraphs;
+    void remove(QLayout* layout);
 };
 
 #endif // WIDGET_H

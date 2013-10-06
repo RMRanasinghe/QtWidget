@@ -26,6 +26,7 @@ public:
     std::list<graphConstructor *> getGraphList();
     std::list<widgetTreeStruct *> treeList;
     void addTree(widgetTreeStruct *tree);
+    void getNewGraphlist();
 private:
     static graphList* graphListInstance;
 };

@@ -9,7 +9,7 @@ class plot
 {
 public:
     plot();
-    void setPlot(QString xUpper, QString xLower, QString xStep, std::list<widgetTreeStruct *> tree);
+    QString setPlot(QString xUpper, QString xLower, QString xStep, std::list<widgetTreeStruct *> tree);
 private:
     communicator* com;
     PlotCommandGenarator* gen;

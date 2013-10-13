@@ -63,6 +63,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="margin">
+       <number>100</number>
+      </property>
       <property name="indent">
        <number>50</number>
       </property>

@@ -15,8 +15,9 @@ plot::plot()
 
 }
 
-void plot::setPlot(QString xUpper, QString xLower, QString xStep, std::list<widgetTreeStruct *> tree){
-
+QString plot::setPlot(QString xUpper, QString xLower, QString xStep, std::list<widgetTreeStruct *> tree){
+    QString s;
+    s = com->processRead();
     com->processWrite(gen->SetX(xLower,xUpper,xStep));
 
     int counter = 0;
@@ -45,7 +46,11 @@ void plot::setPlot(QString xUpper, QString xLower, QString xStep, std::list<widg
         }
 
         ++counter;
-
+        QString result;
+        result = com->processRead();
+        if(result.length()!=0){
+            return QString("In Graph ").append(QString::number(counter)).append("\n").append(result);
+        }
     }
 
     plotArgument.append(");");
@@ -53,4 +58,6 @@ void plot::setPlot(QString xUpper, QString xLower, QString xStep, std::list<widg
     com->processWrite(plotArgument);
     com->processWrite(QString("print -dpng ../temp/temp.png;"));
     com->processWrite(QString("print -dpng ../temp/temp.png;"));
+
+    return QString("Success");
 }

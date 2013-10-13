@@ -66,9 +66,14 @@ void Widget::on_pushButton_clicked()
  */
 void Widget::on_pushButton_3_clicked()
 {
+    setStatus("Wait...");
+    ui->status_label->repaint();
+
+
+    QString status;
 
     plot* plot_instance = new plot();
-    plot_instance->setPlot(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->lineEdit_3->text(),graphList().getInstance()->treeList);
+    status = plot_instance->setPlot(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->lineEdit_3->text(),graphList().getInstance()->treeList);
 
     /*
      *create graphic object instance and set the label as the image in the temp variable
@@ -78,7 +83,14 @@ void Widget::on_pushButton_3_clicked()
 
     g.setImage(ui->label);
 
-    //exit(0);
+    if(status == "Success"){
+        setStatus("Plot ready...");
+    }
+    else{
+        ui->label->setStyleSheet("QLabel {color : red; }");
+        ui->label->setText(status);//set image
+        setStatus("Error...");
+    }
 }
 
 /*
@@ -117,4 +129,8 @@ void Widget::remove(QLayout* layout)
 
         delete child;
     }
+}
+
+void Widget::setStatus(QString str){
+   ui->status_label->setText(str);
 }

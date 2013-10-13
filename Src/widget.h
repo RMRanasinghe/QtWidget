@@ -40,7 +40,10 @@ private:
     Ui::Widget *ui;
 
     int numberOfGraphs;
+
     void remove(QLayout* layout);
+
+    void setStatus(QString str);
 };
 
 #endif // WIDGET_H

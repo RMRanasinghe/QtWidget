@@ -73,6 +73,10 @@ void Widget::on_pushButton_3_clicked()
     QString status;
 
     plot* plot_instance = new plot();
+    if(graphList().getInstance()->treeList.size()==0){
+        setStatus("Add at least one graph...");
+        return;
+    }
     status = plot_instance->setPlot(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->lineEdit_3->text(),graphList().getInstance()->treeList);
 
     /*
@@ -90,6 +94,9 @@ void Widget::on_pushButton_3_clicked()
         ui->label->setStyleSheet("QLabel {color : red; }");
         ui->label->setText(status);//set image
         setStatus("Error...");
+        communicator * com;
+        com = communicator().getInstance();
+        com->reset();
     }
 }
 

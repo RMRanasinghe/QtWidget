@@ -4,6 +4,7 @@
 #include "widgettreestruct.h"
 #include <list>
 #include <iostream>
+#include <QThread>
 
 using namespace std;
 
@@ -58,6 +59,8 @@ QString plot::setPlot(QString xUpper, QString xLower, QString xStep, std::list<w
     com->processWrite(plotArgument);
     com->processWrite(QString("print -dpng ../temp/temp.png;"));
     com->processWrite(QString("print -dpng ../temp/temp.png;"));
+
+    QThread::sleep(5);
 
     return QString("Success");
 }

@@ -86,3 +86,7 @@ communicator* communicator::getInstance(){
     }
     return communicator_instance;
 }
+
+void communicator::reset(){
+    communicator_instance = new communicator();
+}

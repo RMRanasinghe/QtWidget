@@ -22,6 +22,7 @@ public:
     void processWrite(QString str); //send command to octave process
     QString processRead(); //read Standerd output of octave process
     static communicator* getInstance();//communicator singleton instance
+    void reset();
 private:
     QProcess octave; //main octave process.
     static communicator* communicator_instance;
